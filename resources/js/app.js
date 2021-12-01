@@ -18,7 +18,7 @@ const routes = [
     {
         name: '/',
         path: '/',
-        component: Home
+        components: Home
     },
     {
         name: '/contacts',
@@ -26,5 +26,5 @@ const routes = [
         component: ContactsList
     }
 ]
-const router = new VueRouter({routes: routes});
+const router = new VueRouter({mode: 'history', routes: routes});
 const app = new Vue(vue.util.extend(App)).$mount('#app');
